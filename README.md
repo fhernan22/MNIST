@@ -26,6 +26,20 @@ Our objective is to develop an algorithm that takes as input an image and correc
 3. We'll use the relu activation function in both of our hidden layers 
 4. For the output layer we will use the softmax activation function since we want to transform the final values into probabilities.
 
-### Optimizer
+### Optimizer and Loss Function
 
-To be continued...
+1. For our optimizer we will use the adaptive moment estimation (adam) and for our loss function we will choose a SparseCategoricalCrossentropy.
+
+### Training
+
+Using tensorflow training the data is just a matter of calling the fit method on our model object and passing a few arguments. In our case we will pass it the training data, the number of epochs (iterations), our validation inputs and validation targets, and a verbose of 2 so that we could make sure to receive only the most important information in each epoch.
+
+### Testing the Model
+
+Once we train our training and validation sets we will test our model using test set to make sure that we didn't overfit the hyperparameters.
+
+## Results and Future Considerations
+
+After testing our model we achieved a final test accuracy of a little over 98%. In the future we could definitely improve our algorithm by tuning our hyperparameters. We could increase the number of hidden units and layers, play with different activation functions and learning rate, and so on.
+
+This was definitely an extremely educational process and I look forward to continuing my machine learning journey!
